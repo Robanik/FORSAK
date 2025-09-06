@@ -257,7 +257,7 @@ MainTab:CreateToggle({
             if staminaThread then task.cancel(staminaThread) end
         end
     end
-end)
+end})
 end)
 
 ------------------------------------------------
@@ -458,7 +458,6 @@ local function stopESP()
         end
     end
 end)
-end)
 
 AddButton("ESP", "ESP ITEMS", function()
 --// TOOL ESP
@@ -488,7 +487,6 @@ local function highlighttools(state)
         if child:IsA("Tool") then applyHighlight(child) end
     end
 end)
-end)
 
 AddButton("ESP", "ESP GENERATORS", function()
 --// ESP GENERATOR
@@ -509,7 +507,6 @@ local function toggleGeneratorESP(state)
             end
         end
     end
-end)
 end)
 
 ------------------------------------------------
@@ -561,7 +558,7 @@ GeneratorTab:CreateToggle({
         runAutoGen = Value
         if Value then startSafeAutoGen() else stopSafeAutoGen() end
     end
-end)
+end})
 end)
 
 ------------------------------------------------
