@@ -258,6 +258,7 @@ MainTab:CreateToggle({
         end
     end
 end)
+end)
 
 ------------------------------------------------
 
