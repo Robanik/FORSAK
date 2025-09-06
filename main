@@ -238,10 +238,6 @@ end)
 ------------------------------------------------
 
 AddButton("PLAYER", "INFINITY STAMINA", function()
---// INFINITE STAMINA
-local staminaThread
-MainTab:CreateToggle({
-    Name = "Infinite Stamina",
     CurrentValue = false,
     Callback = function(Value)
         if Value then
@@ -257,7 +253,6 @@ MainTab:CreateToggle({
             if staminaThread then task.cancel(staminaThread) end
         end
     end
-end})
 end)
 
 ------------------------------------------------
@@ -550,15 +545,6 @@ local function stopSafeAutoGen()
     runAutoGen = false
     if autoGenThread then task.cancel(autoGenThread) end
 end
-
-GeneratorTab:CreateToggle({
-    Name = "Auto Generator (Turbo e Seguro)",
-    CurrentValue = false,
-    Callback = function(Value)
-        runAutoGen = Value
-        if Value then startSafeAutoGen() else stopSafeAutoGen() end
-    end
-end})
 end)
 
 ------------------------------------------------
